@@ -1,22 +1,27 @@
 import pandas as pd
 
-df = pd.read_excel("mapping_matakuliah/Jadwal_TI24.xlsx")
-df = df[df["Kelas"].str.contains("TI24T")]
+df = pd.read_excel("main.xlsx")
 
-df = df.dropna(how="all")
-baris_baru = {
-    "No": [6, 7],
-    "Nama Dosen": ["Dr.Jasmansyah, M.Pd", "Sona Minasyan, MSW"],
-    "Mata Kuliah": ["Pendidikan Pancasila", "Bahasa Inggris Profesi"],
-    "Semester": [1, 1],
-    "SKS": [2,2],
-    "Kelas": ["TI24T", "TI24T"],
-    "Hari": ["Daring", "Daring"],
-    "Jam": ["10.00 - 12.30", "10.00 - 12.30"],
-    "Kuliah Online atau Offline": ["Online", "Online"],
-}
+df = df[["Hari", "Mulai", "Selesai", "Mata Kuliah", "Kelas", "Nama Dosen"]].copy()
 
-df["No"] = range(1, len(df) + 1)
-df = pd.concat([df, pd.DataFrame(baris_baru)], ignore_index=True)
-print(df)
-df.to_excel("ti24.xlsx", index=False)
+df["Prodi"] = "TI"
+
+
+df["Mulai"] = df["Mulai"].astype(str).str.strip()
+df["Selesai"] = df["Selesai"].astype(str).str.strip()
+
+df = df[df["Mulai"].str.contains(r'^\d{2}\.\d{2}$', na=False)]
+df = df[df["Selesai"].str.contains(r'^\d{2}\.\d{2}$', na=False)]
+
+df["Mulai"] = pd.to_datetime(df["Mulai"], format="%H.%M").dt.time
+df["Selesai"] = pd.to_datetime(df["Selesai"], format="%H.%M").dt.time
+
+susun_hari = ["Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"]
+df["Hari"] = df["Hari"].str.capitalize()
+df["Hari"] = pd.Categorical(df["Hari"], categories=susun_hari, ordered=True)
+
+df_susun = df.sort_values(by=["Hari", "Mulai", "Selesai"]).reset_index(drop=True)
+df_susun["Hari"] = df_susun["Hari"].ffill()
+print(df_susun)
+
+df_susun.to_excel("Jadwal_real.xlsx", index=False)
