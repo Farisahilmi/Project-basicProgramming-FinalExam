@@ -1,0 +1,145 @@
+🛣️ Roadmap Belajar Pandas
+🔰 Level 1: Dasar-dasar Pandas
+Tujuan: Mengenal struktur dan operasi dasar Pandas.
+
+Instalasi dan Import
+
+pip install pandas
+
+import pandas as pd
+
+Struktur Data Dasar
+
+Series
+
+DataFrame
+
+Membuat DataFrame
+
+Dari dictionary
+
+Dari list of lists
+
+Dari file CSV/Excel
+
+Indexing dan Selection
+
+.loc[] vs .iloc[]
+
+Mengakses baris dan kolom
+
+Basic Operations
+
+Menambah / menghapus kolom atau baris
+
+Rename kolom atau baris
+
+Melihat informasi data: .info(), .describe(), .head(), .tail()
+
+📊 Level 2: Manipulasi Data
+Tujuan: Melakukan operasi penting pada data.
+
+Filtering dan Conditional Selection
+
+Sorting dan Reordering
+
+sort_values()
+
+sort_index()
+
+Handling Missing Data
+
+isnull(), notnull()
+
+dropna(), fillna()
+
+Operasi String dan Tanggal
+
+str accessor
+
+pd.to_datetime(), .dt accessor
+
+Merge dan Join DataFrames
+
+merge()
+
+concat()
+
+join()
+
+GroupBy dan Aggregation
+
+groupby()
+
+agg(), mean(), sum(), dll.
+
+🧹 Level 3: Data Cleaning dan Transformasi
+Tujuan: Menyiapkan data untuk analisis.
+
+Detecting and Handling Duplicates
+
+duplicated(), drop_duplicates()
+
+Replacing Values
+
+replace()
+
+Transformasi Data
+
+apply(), map(), lambda
+
+astype() (Type casting)
+
+Pivot Tables dan Crosstab
+
+pivot_table()
+
+pd.crosstab()
+
+📈 Level 4: Analisis Data dan Visualisasi
+Tujuan: Menyajikan dan menganalisis data.
+
+Statistik Dasar
+
+.mean(), .std(), .corr(), .value_counts()
+
+Visualisasi dengan Pandas
+
+.plot() (menggunakan Matplotlib di balik layar)
+
+Line, Bar, Histogram, Pie
+
+Exploratory Data Analysis (EDA) sederhana
+
+Gabungkan teknik statistik dan visualisasi
+
+🧠 Level 5: Tingkat Lanjut
+Tujuan: Menggunakan Pandas untuk kasus nyata dan optimisasi.
+
+Working with Large Datasets
+
+Chunking
+
+Memory optimization
+
+MultiIndex dan Hierarchical Indexing
+
+Time Series Analysis
+
+Resampling
+
+Rolling window functions
+
+Integrasi Pandas dengan Library Lain
+
+NumPy (untuk perhitungan)
+
+Matplotlib & Seaborn (untuk visualisasi)
+
+scikit-learn (untuk machine learning)
+
+Project Akhir: Mini Data Analysis Project
+
+Ambil dataset (misal dari Kaggle)
+
+Lakukan data cleaning → analisis → visualisasi → insight

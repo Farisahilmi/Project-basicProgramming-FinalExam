@@ -6,7 +6,8 @@ import random
 from datetime import datetime, time
 
 #baca file dengan format pd.read_excel "baca excel([Namafile])"
-df = pd.read_excel("Jadwal_dosen.xlsx", skiprows=2)
+df = pd.read_excel("jadwal_dosen.xlsx", skiprows=2)
+
 df.columns = ["No", "Nama Dosen", "Mata Kuliah", "Semester", "SKS", "Kelas", "Hari", "Jam"]
 
 df = df.dropna(how="all")

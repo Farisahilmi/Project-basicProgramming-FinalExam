@@ -1,0 +1,20 @@
+Oke, kalau dari roadmap lengkap yang aku buat tadi, ini yang sudah kamu centang dan kuasai sampai sekarang:
+
+✅ Pengenalan Pandas
+✅ Membuat Series dan DataFrame sederhana
+✅ Membuat DataFrame dengan index custom
+✅ Mengakses data dengan loc dan iloc (paham bedanya)
+✅ Menambah baris dan kolom baru di DataFrame
+✅ Menghapus baris dengan drop()
+✅ Memahami fungsi dasar lambda
+✅ Menggunakan apply dengan lambda untuk kondisi sederhana di kolom
+
+Yang belum kita bahas atau belum kamu coba:
+⬜ Apply dengan fungsi biasa (bukan lambda)
+⬜ Apply dengan axis=1 (operasi per baris)
+⬜ Filtering dan conditional selection yang lebih kompleks
+⬜ Grouping dan aggregasi data (groupby)
+⬜ Merge dan join DataFrame
+⬜ Handling missing data (NaN)
+⬜ Pivot table dan reshaping data
+⬜ Operasi lanjutan dan optimasi performa

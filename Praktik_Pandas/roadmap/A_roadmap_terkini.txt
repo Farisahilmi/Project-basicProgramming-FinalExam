@@ -1,0 +1,54 @@
+🛣️ Roadmap Belajar Pandas — Progress Kamu
+🔰 Level 1: Dasar-dasar Pandas ✅ (SUDAH SELESAI)
+[✅] Instalasi dan Import
+
+[✅] Struktur Data Dasar: Series dan DataFrame
+
+[✅] Membuat DataFrame:
+
+Dari dictionary
+
+Dari list of lists
+
+Dari file (CSV/Excel → akan dilanjut nanti)
+
+[✅] Indexing dan Selection:
+
+.loc[] vs .iloc[]
+
+Akses baris dan kolom
+
+[✅] Basic Operations:
+
+Menambah/menghapus kolom dan baris
+
+Rename kolom
+
+.info(), .describe(), .head(), .tail()
+
+📊 Level 2: Manipulasi Data ✅ (SEBAGIAN SUDAH)
+[✅] Filtering dan Conditional Selection
+
+[✅] Sorting dan Reordering
+
+sort_values()
+
+sort_index()
+
+[✅] Handling Missing Data
+
+isnull(), notnull()
+
+dropna() (✅ sudah)
+
+fillna() (➡️ belum → next)
+
+🔜 Selanjutnya:
+🔧 Masih di Level 2:
+[⬜] fillna() – mengisi nilai yang kosong
+
+[⬜] Operasi String & Tanggal
+
+[⬜] Merge dan Join DataFrames
+
+[⬜] GroupBy dan Aggregation
